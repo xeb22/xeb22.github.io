@@ -84,7 +84,7 @@
       <div class="panel panel-default">
         <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" href="#collapseOne">
           <h4 class="panel-title">
-            <a class="accordion-toggle">Appointments</a>
+            <a class="accordion-toggle" href="#collapseOne">Appointments</a>
           </h4>
         </div>
         <div id="collapseOne" class="panel-collapse collapse out">
@@ -101,7 +101,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" href="#collapseTwo">
             <h4 class="panel-title">
-              <a class="accordion-toggle">New Patient Enrolment</a>
+              <a class="accordion-toggle" href="#collapseTwo">New Patient Enrolment</a>
             </h4>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse out">
@@ -117,7 +117,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" href="#collapseThree">
               <h4 class="panel-title">
-                <a class="accordion-toggle">Repeat Prescriptions</a>
+                <a class="accordion-toggle" href="#collapseThree">Repeat Prescriptions</a>
               </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse out">
@@ -133,7 +133,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour" href="#collapseFour">
               <h4 class="panel-title">
-                <a class="accordion-toggle">Fees</a>
+                <a class="accordion-toggle" href="#collapseFour">Fees</a>
               </h4>
             </div>
             <div id="collapseFour" class="panel-collapse collapse out">
@@ -152,7 +152,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFive" href="#collapseFive">
               <h4 class="panel-title">
-                <a class="accordion-toggle">Results</a>
+                <a class="accordion-toggle" href="#collapseFive">Results</a>
               </h4>
             </div>
             <div id="collapseFive" class="panel-collapse collapse out">
@@ -192,9 +192,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/e69564208d.js"></script>
-<script>  	$('.nav a').on('click', function(){
+<script> $('.nav a').on('click', function(){
     $('.navbar-toggle').click() 
 });
+ $('.panel-heading').on('click', function () {
+        $($(this).data('target')).collapse('toggle');
+    });
 </script>
 </body>
 </html>
